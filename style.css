@@ -1,0 +1,71 @@
+/* jacobross.com — all styling lives here. See AGENTS.md before editing. */
+:root{
+  --bg:#fcfbf9;
+  --ink:#191817;
+  --muted:#a5a19a;
+  --hairline:#efece7;
+  --rule:#e6e2db;
+  --accent:oklch(0.62 0.15 250);
+  --measure:600px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Switzer','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-size:15px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--measure);margin:0 auto;padding:88px 28px 56px}
+@media (max-width:600px){.wrap{padding:56px 22px 48px}}
+
+/* header */
+.name{color:var(--ink)}
+.name a{text-decoration:none}
+.updated{margin-top:2px;color:var(--muted)}
+
+/* prose */
+.prose{margin-top:32px;display:flex;flex-direction:column;gap:18px}
+.prose p{margin:0;text-wrap:pretty}
+a{color:var(--ink)}
+a:hover{color:var(--muted)}
+.prose a{text-decoration:underline;text-underline-offset:2px}
+
+/* section label */
+.label{color:var(--muted)}
+h2.label{font:inherit;color:var(--muted);margin:0}
+
+/* index tables (projects, notes) */
+.list{margin-top:14px;display:grid;grid-template-columns:76px 1fr auto;align-items:baseline;column-gap:12px}
+.list > *{padding:10px 0}
+.list .year{color:var(--muted)}
+.list .title a{text-decoration:none}
+.list .date{color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+/* hairline above every row except the first */
+.list .row-sep{border-top:1px solid var(--hairline)}
+.new{
+  display:inline-block;margin-left:9px;font-size:11.5px;line-height:1;
+  padding:4px 8px 4px 8.5px;border:1px solid var(--accent);
+  border-radius:999px;color:var(--accent);vertical-align:1px;
+}
+
+/* note page body */
+.note-title{margin:32px 0 0;font:inherit;color:var(--ink)}
+.note-date{margin-top:2px;color:var(--muted)}
+.note-body{margin-top:32px;display:flex;flex-direction:column;gap:18px}
+.note-body p{margin:0;text-wrap:pretty}
+.note-body a{text-decoration:underline;text-underline-offset:2px}
+.note-body h2{font:inherit;color:var(--muted);margin:14px 0 0}
+.note-body ul{margin:0;padding-left:20px}
+.note-body blockquote{margin:0;padding-left:16px;border-left:1px solid var(--rule);color:var(--muted)}
+.note-body code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13.5px;background:#f4f1ec;padding:1px 5px;border-radius:4px}
+.back{margin-top:56px}
+.back a{color:var(--muted);text-decoration:none}
+.back a:hover{color:var(--ink)}
+
+/* footer */
+.footer-rule{margin-top:64px;width:48px;height:1px;background:var(--rule)}
+.footer{margin-top:16px;font-size:14px;color:var(--muted)}
